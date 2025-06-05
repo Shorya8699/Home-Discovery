@@ -25,7 +25,8 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative h-screen min-h-[600px] flex items-center"
+      style={{height:"80vh"}}
+      className="relative min-h-[600px] flex items-center"
     >
       <div className="absolute inset-0 z-0">
         <img
@@ -65,21 +66,21 @@ const Hero = () => {
               className="bg-white/10 backdrop-blur-sm p-4 rounded-md"
               whileHover={{ scale: 1.05 }}
             >
-              <p className="text-2xl md:text-3xl font-bold">500+</p>
+              <p className="text-2xl md:text-3xl font-bold">100+</p>
               <p className="text-sm uppercase tracking-wider">Properties</p>
             </motion.div>
             <motion.div
               className="bg-white/10 backdrop-blur-sm p-4 rounded-md"
               whileHover={{ scale: 1.05 }}
             >
-              <p className="text-2xl md:text-3xl font-bold">20+</p>
+              <p className="text-2xl md:text-3xl font-bold">5+</p>
               <p className="text-sm uppercase tracking-wider">Cities</p>
             </motion.div>
             <motion.div
               className="bg-white/10 backdrop-blur-sm p-4 rounded-md hidden md:block"
               whileHover={{ scale: 1.05 }}
             >
-              <p className="text-2xl md:text-3xl font-bold">5000+</p>
+              <p className="text-2xl md:text-3xl font-bold">50+</p>
               <p className="text-sm uppercase tracking-wider">Happy Clients</p>
             </motion.div>
           </motion.div>

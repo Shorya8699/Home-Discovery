@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import Logo from './Logo'
+import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import Logo from './Logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="navbar w-full py-4 px-6 transition-all duration-300 bg-white z-50">
+    <header style={{position: "sticky", top: "0px"}} className="navbar w-full py-4 px-6 transition-all duration-300 bg-white z-50">
       <div className="container-custom flex justify-between items-center">
         <Logo />
         
@@ -56,34 +56,37 @@ const Header = () => {
       </div>
       
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg z-50 transition-all duration-300">
-          <nav className="container-custom py-4">
-            <ul className="flex flex-col space-y-4">
-              {navLinks.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.url} 
-                    className="block py-2 text-neutral-700 hover:text-primary-600 font-medium transition-colors duration-300"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.title}
-                  </a>
-                </li>
-              ))}
-              <li className="pt-2">
+      <div 
+      style={{top:"5rem"}}
+        className={`md:hidden absolute  left-0 right-0 bg-white shadow-lg z-50 transition-all duration-500 ease-in-out transform ${
+          isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-0 opacity-0"
+        }`}
+      >
+        <nav style={{paddingTop:"0px"}} className="container-custom py-4">
+          <ul className="flex flex-col space-y-4">
+            {navLinks.map((link, index) => (
+              <li key={index}>
                 <a 
-                  href="#contact" 
-                  className="btn btn-primary inline-block"
+                  href={link.url} 
+                  className="block py-2 text-neutral-700 hover:text-primary-600 font-medium transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Get Started
+                  {link.title}
                 </a>
               </li>
-            </ul>
-          </nav>
-        </div>
-      )}
+            ))}
+            <li className="pt-2">
+              <a 
+                href="#contact" 
+                className="btn btn-primary inline-block"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Get Started
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

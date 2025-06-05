@@ -25,12 +25,12 @@ const PropertyCategoryCard = ({ category }) => {
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-neutral-600 mb-4">{description}</p>
         <motion.a 
-          href="#properties" 
+          href="#contact" 
           className="text-primary-600 font-medium hover:text-primary-700 inline-flex items-center"
           whileHover={{ x: 4 }}
           transition={{ type: "spring", stiffness: 400 }}
         >
-          View Properties
+          Contact Us
           <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
           </svg>

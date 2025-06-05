@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,37 +16,36 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    alert('Thank you for your message! We will get back to you soon.');
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  emailjs.send('service_sojn9bk', 'template_ah5zjxh', formData, 'r6A60zFa-vmgoXkli')
+    .then((response) => {
+      alert('Thank you for your message! We will get back to you soon.');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    }, (err) => {
+      alert('Failed to send message. Please try again.');
     });
-  };
+};
   
   const contactInfo = [
     {
       icon: <FaPhone className="text-primary-500" />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+91 6284-618-710",
+      link: "tel:+916284618710"
     },
     {
       icon: <FaEnvelope className="text-primary-500" />,
       label: "Email",
       value: "contact@homediscovery.com",
-      link: "mailto:contact@homediscovery.com"
+      // link: "mailto:contact@homediscovery.com"
     },
     {
       icon: <FaMapMarkerAlt className="text-primary-500" />,
       label: "Address",
-      value: "123 Property Lane, Real Estate City, 10001",
-      link: "https://maps.google.com"
+      value: "Gillco Valley, Sector-115 Landran Road, Kharar 140301",
+      // link: "https://maps.google.com"
     }
   ];
 
@@ -151,13 +152,13 @@ const Contact = () => {
                   <span>9:00 AM - 6:00 PM</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span>10:00 AM - 4:00 PM</span>
+                  <span>Saturday - Sunday:</span>
+                  <span>10:00 AM - 8:00 PM</span>
                 </li>
-                <li className="flex justify-between">
+                {/* <li className="flex justify-between">
                   <span>Sunday:</span>
                   <span>Closed</span>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

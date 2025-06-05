@@ -7,35 +7,31 @@ const CitiesSection = () => {
   
   const cities = [
     {
-      name: "New York",
-      imageUrl: "https://images.pexels.com/photos/802024/pexels-photo-802024.jpeg",
-      propertyCount: 78
+      name: "Kharar",
+      imageUrl: "https://scontent.fixc4-5.fna.fbcdn.net/v/t39.30808-6/405867283_2902309799908735_3076314556333239981_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=2285d6&_nc_ohc=w8GQyXtYVaQQ7kNvwF5HJd-&_nc_oc=AdnLRbCGSqCqRrl_pX6k1MBxQ5f1GYIMqyBgYtEiZWm3cfbvwcPjbHJc8M1sXAJVCpH9QYgKIGyJNyKOXevrrYbM&_nc_zt=23&_nc_ht=scontent.fixc4-5.fna&_nc_gid=7jd8LzgpLUZ62ehnr6gylw&oh=00_AfLbs4kJLGfbWOv10xG5pPZn1_lPrwZyHYdTfmDK3JycHg&oe=6843B235",
+      propertyCount: 24
     },
     {
-      name: "Los Angeles",
-      imageUrl: "https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg",
-      propertyCount: 64
+      name: "Kurali Road",
+      imageUrl: "https://imagecdn.99acres.com/media1/20592/1/411841882O-1737897919041.jpg",
+      propertyCount: 20
     },
     {
-      name: "Chicago",
-      imageUrl: "https://images.pexels.com/photos/2129796/pexels-photo-2129796.jpeg",
-      propertyCount: 42
+      name: "Mohali",
+      imageUrl: "https://homelandregalia.com/wp-content/uploads/2024/10/homeland-The-chanding-Mohali.webp",
+      propertyCount: 15
     },
     {
-      name: "Miami",
-      imageUrl: "https://images.pexels.com/photos/2525903/pexels-photo-2525903.jpeg",
-      propertyCount: 51
+      name: "Chandigarh",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Open_Hand_monument%2C_Chandigarh.jpg/1280px-Open_Hand_monument%2C_Chandigarh.jpg",
+      propertyCount: 12
     },
     {
-      name: "San Francisco",
-      imageUrl: "https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg",
-      propertyCount: 37
+      name: "Zirakpur",
+      imageUrl: "https://img500.exportersindia.com/product_images/bc-500/2023/12/12824833/trishla-city-4-bhk-flat-in-zirakpur-1701842236-7196306.jpeg",
+      propertyCount: 10
     },
-    {
-      name: "Seattle",
-      imageUrl: "https://images.pexels.com/photos/2559749/pexels-photo-2559749.jpeg",
-      propertyCount: 29
-    }
+    
   ];
   
   const scroll = (direction) => {

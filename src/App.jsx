@@ -8,6 +8,10 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page on reload
+  }, []); 
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector('.navbar');
