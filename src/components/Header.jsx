@@ -18,7 +18,7 @@ const Header = () => {
   ];
 
   return (
-    <header style={{position: "sticky", top: "0px"}} className="navbar w-full py-4 px-6 transition-all duration-300 bg-white z-50">
+    <header style={{ position: "sticky", top: "0px" }} className="navbar w-full py-4 px-6 transition-all duration-300 bg-white z-50">
       <div className="container-custom flex justify-between items-center">
         <Logo />
         
@@ -57,12 +57,12 @@ const Header = () => {
       
       {/* Mobile Menu */}
       <div 
-      style={{top:"5rem"}}
-        className={`md:hidden absolute  left-0 right-0 bg-white shadow-lg z-50 transition-all duration-500 ease-in-out transform ${
+        style={{ top: "5rem", visibility: isMenuOpen ? "visible" : "hidden", height: isMenuOpen ? "auto" : "0" }}
+        className={`md:hidden absolute left-0 right-0 bg-white shadow-lg z-50 transition-all duration-500 ease-in-out transform ${
           isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-0 opacity-0"
         }`}
       >
-        <nav style={{paddingTop:"0px"}} className="container-custom py-4">
+        <nav style={{ paddingTop: "0px" }} className="container-custom py-4">
           <ul className="flex flex-col space-y-4">
             {navLinks.map((link, index) => (
               <li key={index}>

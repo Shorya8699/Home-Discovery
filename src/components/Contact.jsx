@@ -74,6 +74,7 @@ const handleSubmit = (e) => {
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                   required
+                  
                 />
               </div>
               
